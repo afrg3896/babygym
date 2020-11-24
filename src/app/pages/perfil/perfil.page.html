@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content fullscreen scroll-y="false">
+    <ion-grid class="parte">
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <img class="imga" *ngIf="usuarioData?.imagen === ''" src="assets/gato.png"> <br>
+                <img class="imga" *ngIf="usuarioData?.imagen !== ''" [src]="usuarioData.imagen">
+                <h4 class="ion-text-capitalize">{{usuarioData.nombre}}</h4>
+            </ion-col>
+        </ion-row>
+        <ion-button *ngIf="usuarioData?.genero === 'm'" class="boton" (click)="actualizar()" fill="clear">Actualizar Icono</ion-button>
+        <ion-button *ngIf="usuarioData?.genero === 'f'" class="boton" (click)="actualizar()" fill="clear">Actualizar Icono</ion-button>
+    </ion-grid>
+
+    <ion-grid style="height: 50%; margin-top: 10px;">
+        <ion-row>
+            <ion-col>
+                <h3>Información de Cuenta</h3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                            <img src="assets/persona.png">
+                        </ion-thumbnail>
+                        <ion-label>
+                            <h5>Nombre</h5>
+                            <p class="ion-text-capitalize">{{usuarioData.nombre}}</p>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                            <img src="assets/telef.png">
+                        </ion-thumbnail>
+                        <ion-label>
+                            <h5>Celular</h5>
+                            <p class="ion-text-capitalize">{{usuarioData.telefono}}</p>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                            <img src="assets/correo.png">
+                        </ion-thumbnail>
+                        <ion-label>
+                            <h5>Email</h5>
+                            <p class="ion-text-capitalize">{{usuarioData.email}}</p>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-thumbnail slot="start">
+                            <img src="assets/nido.png">
+                        </ion-thumbnail>
+                        <ion-label>
+                            <h5>Nido</h5>
+                            <p class="ion-text-capitalize">{{usuarioData.nido}}</p>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

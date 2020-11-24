@@ -1,0 +1,92 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/inicio"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding bg-image" scroll-y="false">
+    <form [formGroup]="registroForm" (ngSubmit)="registro()">
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+                <img class="logo" src="assets/logo.png">
+                <div class="slide">
+                    <img class="inicio" src="assets/Natalia.png" />
+                    <h2>¿Cuál es tu nombre?</h2>
+                    <ion-item lines="none" class="daticos">
+                        <ion-input formControlName="name" placeholder="Nombres y Apellidos" type="text" required></ion-input>
+                    </ion-item>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img class="logo" src="assets/logo.png">
+                <div class="slide">
+                    <img class="inicio" src="assets/Isabella.png" />
+                    <h2>¿Cuál es tu email y contraseña?</h2>
+                    <ion-item lines="none" class="daticos">
+                        <ion-label stacked>Email:</ion-label>
+                        <ion-input formControlName="email" type="email" required></ion-input>
+                    </ion-item>
+                    <ion-item lines="none" class="daticos">
+                        <ion-label stacked>Contraseña:</ion-label>
+                        <ion-input formControlName="password" type="password" required></ion-input>
+                    </ion-item>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img class="logo" src="assets/logo.png">
+                <div class="slide">
+                    <img class="inicio" src="assets/Pedro.png" />
+                    <h2>¿Cuál es tu número de celular?</h2>
+                    <ion-item lines="none" class="daticos">
+                        <ion-label stacked>Cel:</ion-label>
+                        <ion-input formControlName="telefono" type="number" required></ion-input>
+                    </ion-item>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img class="logo" src="assets/logo.png">
+                <div class="slide">
+                    <img class="inicio" src="assets/Tomas.png" />
+                    <h2>¿Cuál es tu nido?</h2>
+                    <ion-row class="ion-text-center">
+                        <ion-col class="ion-text-center">
+                            <ion-item lines="none" class="daticos" style=" margin-left: 25%; width: 50%">
+                                <ion-select formControlName="nido" style="max-width: 100%; width: 100%">
+                                    <ion-select-option value="1">1</ion-select-option>
+                                    <ion-select-option value="2">2</ion-select-option>
+                                    <ion-select-option value="3">3</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img class="logo" src="assets/logo.png">
+                <div class="slide">
+                    <img class="inicio" src="assets/genero.png" />
+                    <h2>¿Cuál es tu género?</h2>
+                    <ion-row>
+                        <ion-col style="display: flex;">
+                            <ion-item lines="none" class="datico">
+                                <ion-select formControlName="genero" style="max-width: 100%; width: 100%">
+                                    <ion-select-option value="m">Niño</ion-select-option>
+                                    <ion-select-option value="f">Niña</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col style="width: 80%;" class="ion-text-center">
+                            <ion-button type="submit" [disabled]="!registroForm.valid" class="boton" (click)="registro()" fill="clear"></ion-button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </form>
+</ion-content>

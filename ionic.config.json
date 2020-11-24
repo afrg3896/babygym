@@ -1,5 +1,7 @@
 {
   "name": "babygym",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

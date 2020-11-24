@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar color="azoscuro">
+        <ion-buttons slot="start" (click)="linternaOff()">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="color: white;">Luz y Sombra</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="false">
+    <ion-grid style="margin-top: 10%; margin-left: 12%; margin-right: 12%;">
+        <ion-slides [ngStyle]="{'background': fondo}">
+            <ion-slide>
+                <img [ngStyle]="{'opacity': opacidad}" class="logo" src="assets/hoja.PNG">
+            </ion-slide>
+            <ion-slide>
+                <img [ngStyle]="{'opacity': opacidad}" class="logo" src="assets/pajaro.PNG">
+            </ion-slide>
+            <ion-slide>
+                <img [ngStyle]="{'opacity': opacidad}" class="logo" src="assets/conejo.PNG">
+            </ion-slide>
+        </ion-slides>
+    </ion-grid>
+    <ion-grid style="margin-top: 30%;">
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <div class="mid">
+
+                    <label class="rocker rocker-small">
+                      <input type="checkbox" (click)="switchflash($event)">
+                      <span class="switch-left">On</span>
+                      <span class="switch-right">Off</span>
+                    </label>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

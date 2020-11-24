@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="end">
+            <ion-button (click)="cerrar()">
+                <ion-icon color="medium" name="close-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg-image no-scroll">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <h3>Icono de Perfil</h3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-text-center" size="6" *ngFor="let item of imagenes">
+                <img [src]="item" tappable (click)="selectImage(item)">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <ion-button (click)="actualizar()" class="boton" fill="clear"></ion-button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

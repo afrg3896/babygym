@@ -1,0 +1,46 @@
+ion-toolbar {
+    --background: #DFFF9E;
+    --border-style: none;
+}
+
+.no-scroll .scroll-content {
+    --overflow: hidden;
+}
+
+.parte {
+    height: 40%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: url(../../../assets/fondo3.JPG) 0 0/100% 100% no-repeat;
+}
+
+h4 {
+    color: #60742A;
+}
+
+h3,
+h5 {
+    color: rgba(151, 151, 151, 0.952);
+}
+
+.imga {
+    width: 50%;
+    height: 58%;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+ion-thumbnail {
+    width: 35px;
+    height: 35px;
+}
+
+.boton {
+    background: url(../../../assets/boton4.PNG) 0 0/100% 100% no-repeat;
+    height: 25%;
+    width: 50%;
+    position: absolute;
+    color: white;
+    left: 25%;
+    bottom: 44%;
+}

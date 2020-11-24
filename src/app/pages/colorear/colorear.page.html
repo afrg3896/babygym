@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="azverde">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Coloreo
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false" class="bg-image" scroll-y="false">
+    <ion-row>
+        <ion-col *ngFor="let color of colors" [style.background]="color" class="color-block" tappable (click)="selectColor(color)"></ion-col>
+    </ion-row>
+    <ion-radio-group [(ngModel)]="selectedColor">
+        <ion-row style="background: white;">
+            <ion-col *ngFor="let color of colors" class="ion-text-center">
+                <ion-radio [value]="color"></ion-radio>
+            </ion-col>
+        </ion-row>
+    </ion-radio-group>
+
+    <ion-range style="background: white;" min="2" max="20" color="primary" [(ngModel)]="lineWidth">
+        <ion-icon size="small" slot="start" name="brush"></ion-icon>
+        <ion-icon slot="end" name="brush"></ion-icon>
+    </ion-range>
+
+    <canvas #imageCanvas (mousedown)="startDrawing($event)" (touchstart)="startDrawing($event)" (touchmove)="moved($event)" (mousemove)="moved($event)" (mouseup)="endDrawing()" (touchend)="endDrawing()"></canvas>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6 class="ion-text-center">
+                <ion-button [disabled]="!sw" color="azverde" id="capture" (click)="colorear()">
+                    <ion-icon name="color-palette"></ion-icon>
+                </ion-button>
+            </ion-col>
+
+            <ion-col col-6 class="ion-text-center">
+                <ion-button [disabled]="sw" color="azverde" id="flip" (click)="eraser()">
+                    <ion-icon name="trash"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <img src="assets/fondo4.png">
+    </ion-grid>
+
+</ion-content>

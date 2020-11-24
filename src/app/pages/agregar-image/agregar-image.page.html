@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="danger">
+        <ion-title>
+            Subir Imagen
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="cerrar()">
+                <ion-icon name="close-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [ngClass]="{'custom-ion-content': isToBack}">
+    <form [formGroup]="subidaForm" (ngSubmit)="upload()">
+        <ion-grid>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button color="primary" (click)="startCameraAbove()">Cámara</ion-button>
+                </ion-col>
+                <ion-col class="ion-text-center">
+                    <ion-button color="danger" (click)="stopCamera()">Stop</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button color="success" (click)="takePicture()">Capturar</ion-button>
+                </ion-col>
+                <ion-col class="ion-text-center">
+                    <ion-button color="warning" (click)="switchCamera()">Switch</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button color="danger" (click)="hide()">Ocultar</ion-button>
+                </ion-col>
+                <ion-col class="ion-text-center">
+                    <ion-button color="tertiary" (click)="show()">Mostrar</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-label>Zoom:</ion-label>
+                    <ion-range min="1" max="100" pin color="secondary" [(ngModel)]="setZoom" (ionChange)="changeZoom()">
+                        <ion-icon slot="start" size="small" name="search-outline"></ion-icon>
+                        <ion-icon slot="end" name="search-outline"></ion-icon>
+                    </ion-range>
+                </ion-col>
+                <ion-col class="ion-text-center">
+                    <ion-button type="submit" [disabled]="!subidaForm.valid || IMAGE_PATH.length === 0">
+                        <ion-icon name="cloud-upload"></ion-icon>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-input formControlName="nombreI" type="text" placeholder="Ingrese un título de la imagen"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="IMAGE_PATH">
+                <ion-col>
+                    <img [src]="IMAGE_PATH">
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+    </form>
+
+</ion-content>

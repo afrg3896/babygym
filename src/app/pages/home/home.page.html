@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="start">
+            <ion-button (click)="logout()" fill="clear">
+                <ion-icon color="medium" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" class="bg-image no-scroll">
+    <ion-item lines="none" class="item1">
+        <ion-thumbnail (click)="irPerfil()" slot="end">
+            <img style="border-radius: 20px;" *ngIf="userInfo?.imagen === ''" src="assets/gato.png">
+            <img style="border-radius: 30px;" *ngIf="userInfo?.imagen !== ''" [src]="userInfo?.imagen">
+        </ion-thumbnail>
+        <ion-label>
+            <h1 style="color: grey;" class="ion-text-capitalize">Hola, <strong>{{userInfo?.nombre}}</strong></h1>
+            <p>Bienvenido a BabyGym</p>
+        </ion-label>
+    </ion-item>
+    <ion-grid class="main-card">
+        <ion-button fill="clear" (click)="irColorear()" class="boton1"></ion-button>
+    </ion-grid>
+    <ion-grid class="main-cards">
+        <ion-row class="fila1">
+            <ion-col>
+                <ion-card class="tarjeta5">
+                    <ion-button fill="clear" (click)="irLinterna()" class="boton4"></ion-button>
+                    <ion-card-content>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-row style="height: 50%; width: 100%; margin-bottom: 5px;">
+                    <ion-col class="ion-text-center">
+                        <ion-card class="tarjeta2">
+                            <ion-button fill="clear" (click)="irCamara()" class="boton3"></ion-button>
+                            <ion-card-content>
+
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row style="height: 49%;">
+                    <ion-col class="ion-text-center">
+                        <ion-card class="tarjeta3">
+                            <ion-button fill="clear" (click)="irEmociones()" class="boton2"></ion-button>
+                            <ion-card-content>
+
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

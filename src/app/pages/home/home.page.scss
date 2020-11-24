@@ -1,0 +1,162 @@
+.bg-image {
+    --background: url(../../../assets/sesion.png) 0 0/100% 100% no-repeat;
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.item1 {
+    --background: rgba(0, 0, 0, 0);
+    --border-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll .scroll-content {
+    --overflow: hidden;
+}
+
+.main-card {
+    background: url(../../../assets/color.JPG) 0 0/100% 100% no-repeat;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    overflow: hidden;
+    height: 30%;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    ion-col {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+    }
+}
+
+.boton1 {
+    --border-radius: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    height: 30%;
+    width: 45%;
+}
+
+.main-cards {
+    border-radius: 8px;
+    margin: 12px;
+    margin-top: -12px;
+    margin-bottom: -11px;
+    overflow: hidden;
+    height: 57%;
+    margin-left: 15px;
+    margin-right: 10px;
+    ion-col {
+        justify-content: center;
+        padding: 4px;
+    }
+    ion-card {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.main {
+    background: url(../../../assets/Foto.png) 0 0/100% 100% no-repeat;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    overflow: hidden;
+    height: 25%;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    ion-col {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+    }
+}
+
+.fila1 {
+    height: 90%;
+}
+
+.fila2 {
+    margin-bottom: 10px;
+    height: 50%;
+}
+
+.fila1>ion-col {
+    flex: 0 50%;
+    box-sizing: border-box
+}
+
+.fila2>ion-col {
+    flex: 0 50%;
+    box-sizing: border-box
+}
+
+.tarjeta2 {
+    background: url(../../../assets/simertria.jpg) 0 0/100% 100% no-repeat;
+    margin-left: 0px;
+    height: 100%;
+}
+
+.tarjeta3 {
+    background: url(../../../assets/emocion.png) 0 0/100% 100% no-repeat;
+    margin-left: 0px;
+    height: 100%;
+}
+
+.tarjeta5 {
+    background: url(../../../assets/luz.jpg) 0 0/100% 100% no-repeat;
+    margin-left: 1px;
+    height: 100%;
+}
+
+.tarjeta1 {
+    background: url(../../../assets/Foto.png) 0 0/100% 100% no-repeat;
+    margin-left: 1px;
+    height: 100%;
+}
+
+.boton2 {
+    --border-radius: 50px;
+    position: absolute;
+    bottom: 2px;
+    left: 70%;
+    height: 30%;
+    width: 30%;
+}
+
+.boton3 {
+    --border-radius: 50px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    height: 30%;
+    width: 50%;
+}
+
+.boton4 {
+    --border-radius: 50px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 30%;
+    width: 60%;
+}
+
+.boton5 {
+    --border-radius: 50px;
+    position: absolute;
+    bottom: 7%;
+    left: 45%;
+    height: 40%;
+    width: 50%;
+}

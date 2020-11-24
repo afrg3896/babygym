@@ -1,0 +1,102 @@
+ion-slides {
+    height: 100%;
+    --bullet-background: rgb(0, 255, 0);
+    --bullet-background-active: rgb(16, 255, 16);
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.bg-image {
+    --background: url(../../../assets/sesion.png) 0 0/100% 100% no-repeat;
+}
+
+.swiper-slide {
+    display: block;
+}
+
+.swiper-slide h2 {
+    margin-top: 5px;
+    color: rgb(121, 121, 121);
+}
+
+.logo {
+    max-height: 20%;
+    max-width: 20%;
+}
+
+.swiper-slide .inicio {
+    max-height: 50%;
+    max-width: 80%;
+    margin: 10px 0 5px;
+    pointer-events: none;
+}
+
+b {
+    font-weight: 500;
+}
+
+p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ion-color-step-600, #60646b);
+}
+
+p b {
+    color: var(--ion-text-color, #000000);
+}
+
+.daticos {
+    border: 1px #2dd36f solid;
+    --highlight-height: 0;
+    --background: none;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    ion-label {
+        color: #2dd36f !important;
+        font-size: 1rem!important;
+        font-weight: lighter;
+    }
+    ion-input {
+        --color: #2dd36f;
+    }
+    ion-icon {
+        margin-right: 5px;
+    }
+}
+
+.datico {
+    border: 1px #2dd36f solid;
+    --highlight-height: 0;
+    --background: none;
+    background: #ffffff;
+    border-radius: 30px;
+    width: 100%;
+    ion-label {
+        color: #2dd36f !important;
+        font-size: 1rem!important;
+        font-weight: lighter;
+    }
+    ion-input {
+        --color: #2dd36f;
+    }
+    ion-icon {
+        margin-right: 5px;
+    }
+}
+
+ion-select {
+    max-width: 90%;
+}
+
+.boton {
+    background: url(../../../assets/play.png) 0 0/100% 100% no-repeat;
+    max-height: 100%;
+    max-width: 100%;
+}

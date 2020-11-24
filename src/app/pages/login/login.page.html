@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/inicio"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg-image no-scroll">
+    <form (ngSubmit)="login(fLogin)" #fLogin="ngForm">
+        <ion-grid style="height: 100%; width: 100%; margin-top:5%" class="my-grid">
+            <ion-row style="margin-left: 30px; margin-right: 20px; margin-bottom: 10%; margin-top: -20%;">
+                <ion-col class="ion-text-center">
+                    <img src="assets/login.png">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list class="background-input">
+                        <ion-item class="daticos" style="margin-bottom: 10px;">
+                            <ion-icon slot="start" name="mail" item-left></ion-icon>
+                            <ion-label>Email:</ion-label>
+                            <ion-input [(ngModel)]="loginUser.email" name="email" type="email" required></ion-input>
+                        </ion-item>
+
+                        <ion-item class="daticos">
+                            <ion-icon slot="start" name="lock-closed" item-left></ion-icon>
+                            <ion-label>Contraseña:</ion-label>
+                            <ion-input [(ngModel)]="loginUser.password" name="password" type="password" required></ion-input>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+
+            </ion-row>
+
+            <ion-row class="paginas ion-text-center" lines="none" style="margin-top: -15px;">
+                <ion-col>
+                    <ion-label routerLink="/recuperar" style="font-size: 11px; color: #80AC4D;;">¿Olvidaste tu Contraseña?</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button class="boton" type="submit" fill="clear"></ion-button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <p>Al continuar, usted acepta los Términos de servicio y la Política de privacidad de BabyGym</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</ion-content>

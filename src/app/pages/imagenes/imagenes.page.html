@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Imagenes</ion-title>
+        <ion-buttons slot="end">
+            <ion-button fill="clear" (click)="irAgregarE()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let imagen of imagenes">
+        <img [src]="imagen.url" />
+        <ion-card-header>
+            <ion-card-subtitle>Destination</ion-card-subtitle>
+            <ion-card-title class="ion-text-capitalize">{{imagen.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            fecha: {{imagen?.fechacreado | date: 'longDate'}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,50 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.logo {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+// Slider Style START 
+.custon-nav {
+    height: 70px;
+    width: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-icon-custom {
+    --background: url(../../../assets/boton.png) 0 0/100% 100% no-repeat;
+}
+
+.prev-icon-custom.disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.next-icon-custom {
+    --background: url(../../../assets/Boton2.png) 0 0/100% 100% no-repeat;
+}
+
+.next-icon-custom.disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.slider-nav {
+    ion-icon {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.colores {
+    height: 40px;
+    box-shadow: 1px 5px 5px black;
+}

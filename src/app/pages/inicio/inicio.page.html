@@ -1,0 +1,37 @@
+<ion-content class="bg-image no-scroll">
+    <ion-grid style="height: 100%; width: 100%; margin-top:8%" class="my-grid">
+
+        <ion-row style="margin-left: 30px; margin-right: 20px; margin-bottom: 10%; margin-top: -10px;">
+            <ion-col class="ion-text-center">
+                <img class="logo" src="assets/logo.png">
+            </ion-col>
+        </ion-row>
+
+        <ion-row style="margin-left: 30px; margin-right: 20px; margin-bottom: -130px; margin-top: -50px;">
+            <ion-col class="ion-text-center">
+                <img class="logo2" src="assets/home.png">
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 15%;">
+            <ion-col>
+                <ion-card class="boton">
+                    <ion-button fill="clear" (click)="irLogin()" class="boton2"></ion-button>
+                    <ion-card-content>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: -100px;" class="paginas ion-text-center" lines="none">
+            <ion-col>
+                <ion-label routerLink="/registro" color="medium" style="font-size: 15px; color: #80AC4D;">¿No tienes cuenta?</ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 5%;">
+            <ion-col class="ion-text-center">
+                <p>Al continuar, usted acepta los Términos de servicio y la Política de privacidad de BabyGym</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

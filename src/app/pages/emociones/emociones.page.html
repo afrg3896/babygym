@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar lines="none">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: {{selectedColor}}" [fullscreen]="true" class="ion-padding">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <h3 *ngIf="selectedColor === '#ffffff'" style="color: black;">¿Cómo te sientes hoy?</h3>
+                <h3 *ngIf="selectedColor !== '#ffffff'" style="color: white;">¿Cómo te sientes hoy?</h3>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="1" style="right: 17px;">
+                <ion-button class="prev-icon-custom custon-nav" fill="clear" (click)="slidePrev(sliderOne,slideWithNav)" [class.disabled]="sliderOne.isBeginningSlide">
+                </ion-button>
+            </ion-col>
+            <ion-col size="10">
+                <ion-slides pager="false" [options]="slideOptions" #slideWithNav (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+                    <ion-slide>
+                        <img class="logo" src="assets/alegria.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Duda.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Enojo.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Tristeza.png">
+                    </ion-slide>
+                </ion-slides>
+
+            </ion-col>
+            <ion-col size="1" style="margin-left: -5px;">
+                <ion-button class="next-icon-custom custon-nav" fill="clear" (click)="slideNext(sliderOne,slideWithNav)" [class.disabled]="sliderOne.isEndSlide">
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row style="margin-top: -20%;">
+            <ion-col size="1" style="right: 17px;">
+                <ion-button class="prev-icon-custom custon-nav" fill="clear" (click)="slidePrev(sliderSecond,slideWithNav2)" [class.disabled]="sliderSecond.isBeginningSlide">
+                </ion-button>
+            </ion-col>
+            <ion-col size="10">
+
+                <ion-slides pager="false" [options]="slideOptions" #slideWithNav2 (ionSlideDidChange)="SlideDidChange(sliderSecond,slideWithNav2)">
+                    <ion-slide>
+                        <img class="logo" src="assets/Boca1.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Boca2.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Boca3.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Boca4.png">
+                    </ion-slide>
+                    <ion-slide>
+                        <img class="logo" src="assets/Boca5.png">
+                    </ion-slide>
+                </ion-slides>
+
+            </ion-col>
+            <ion-col size="1" style="margin-left: -7px;">
+                <ion-button class="next-icon-custom custon-nav" fill="clear" (click)="slideNext(sliderSecond,slideWithNav2)" [class.disabled]="sliderSecond.isEndSlide">
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="colores">
+            <ion-col *ngFor="let color of colors" style="border: 1px black solid" [style.background]="color" class="color-block" tappable (click)="selectColor(color)"></ion-col>
+        </ion-row>
+
+
+    </ion-grid>
+
+
+
+</ion-content>
